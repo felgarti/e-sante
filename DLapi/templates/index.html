@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div >
+ <h3 id="text" >{{text}} </h3>
+</div>
+
+<script>
+
+
+    var socket = new WebSocket('ws://localhost:8001/ws/har/')
+    socket.onmessage=function(event){
+var data= JSON.parse(event.data);
+console.log(data);
+
+    }
+
+
+
+</script>
+
+</body>
+</html>
